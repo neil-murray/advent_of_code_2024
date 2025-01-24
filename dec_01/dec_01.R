@@ -22,7 +22,9 @@ total_dist <- sum(paired$dist)
 
 # Part 2 ------------------------------------------------------------------
 
+# How many times are elements in group1 matched in group2
 paired$num_matches <- sapply(paired$group1, function(x) sum(paired$group2 == x))
+
 paired$similarity <- paired$num_matches * paired$group1
 
 
